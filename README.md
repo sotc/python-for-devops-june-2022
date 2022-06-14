@@ -2,11 +2,21 @@
 Python DevOps work with AWS and Actions
 
 
-# python-for-devops-may-2022
-Python DevOps work
+### CI/CD - 
 
-### CI/CD - IAC
-* CDK to create iam roles 
+### IAC
+* CDK api gateway & lambda integration
+1. cdk init 
+2. uncomment cdk.Environment in app.py
+3. cdk bootstrap
+
+CDK commands
+
+ * `cdk ls`          list all stacks in the app
+ * `cdk synth`       emits the synthesized CloudFormation template
+ * `cdk deploy`      deploy this stack to your default AWS account/region
+ * `cdk diff`        compare deployed stack with current state
+ * `cdk docs`        open CDK documentation
 
 ### Devops Cycle: 
   * SWE
