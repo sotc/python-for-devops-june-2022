@@ -1,3 +1,6 @@
+[![Test On Multiple Python Versions](https://github.com/sotc/python-for-devops-june-2022/actions/workflows/main.yml/badge.svg)](https://github.com/sotc/python-for-devops-june-2022/actions/workflows/main.yml)
+
+
 # python-for-devops-june-2022
 Python DevOps work with AWS and Actions
 
