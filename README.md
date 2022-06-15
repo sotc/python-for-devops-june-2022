@@ -5,13 +5,12 @@ Python DevOps work with AWS and Actions
 ### CI/CD - 
 
 ### IAC
-* CDK api gateway & lambda integration
+CDK api gateway & lambda integration. Assumes aws cli installed and account environment variables setup
 1. cdk init 
 2. uncomment cdk.Environment in app.py
 3. cdk bootstrap
 
 CDK commands
-
  * `cdk ls`          list all stacks in the app
  * `cdk synth`       emits the synthesized CloudFormation template
  * `cdk deploy`      deploy this stack to your default AWS account/region
@@ -37,8 +36,8 @@ CDK commands
 ### Github Codespaces
 Build out python project scaffold:
 
-* [Makefile](https://github.com/sotc/python-for-devops-may-2022/blob/main/Makefile)
-* [requirements.txt](https://github.com/sotc/python-for-devops-may-2022/blob/main/requirements.txt)
+* [Makefile](https://github.com/sotc/python-for-devops-june-2022/blob/main/Makefile)
+* [requirements.txt](https://github.com/sotc/python-for-devops-june-2022/blob/main/requirements.txt)
 * [test_devopslib.py](https://github.com/sotc/python-for-devops-may-2022/blob/main/test_devopslib.py)
 * [python_library](https://github.com/sotc/python-for-devops-may-2022/tree/main/devopslib)
 * Dockerfile
