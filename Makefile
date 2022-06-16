@@ -4,6 +4,9 @@ setup:
 install:
 	pip install -r requirements.txt
 
+post-install:
+	python -m textblob.download_corpora
+
 lint:
 	pylint --disable=R,C devopscdk-app/lambdaDevOpsApp/fruit.py
 
@@ -11,9 +14,12 @@ format:
 	black devopscdk-app/lambdaDevOpsApp/*.py
 
 deploy:
-	echo "deploy code"
+	echo "deploy to aws code here"
 
-all: install post-install lint test format deploy
+test-cdk:
+	cd devopscdk-app; python -m pytest -vv
 
 #test:
-#	python -m pytest -vv --cov=devopscdk-app
+#	python -m pytest -vv --cov=devopslib
+
+all: install post-install lint format deploy

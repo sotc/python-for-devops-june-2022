@@ -1,11 +1,13 @@
 [![Test On Multiple Python Versions](https://github.com/sotc/python-for-devops-june-2022/actions/workflows/main.yml/badge.svg)](https://github.com/sotc/python-for-devops-june-2022/actions/workflows/main.yml)
 
+[![AWS Code Build]](https://codebuild.us-west-2.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoielplY0ZhaytrYmVzdGNDMm9peWFad1gvRno5UWowbGtVYTJTSU1qK0Y5RllDRUdGOGx0VExxMVViUHZ2cmZXTUNrY0ROYzl5MzRQeUhUUXpXa1NTRFJJPSIsIml2UGFyYW1ldGVyU3BlYyI6IjZMUUEwQ0lwYmk4NFduZ2EiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=main)
 
 # python-for-devops-june-2022
 Python DevOps work with AWS and Actions
 
 
 ### CI/CD - 
+github Actions
 
 ### IAC
 CDK api gateway & lambda integration. Assumes aws cli installed and account environment variables setup
@@ -27,14 +29,10 @@ CDK commands
   * Automation
 
 ## Create a project scaffold
-* Colab Notebook 
 * Create development environment that is cloud-based:
-* Github Codespaces 
-* AWS CloudShell
-* AWS Cloud9
 
 ### Colab Notebook
-* This is an example of how to use [colab](https://github.com/sotc/python-for-devops-may-2022/blob/main/getting_started_python.ipynb)
+* This is an example of how to use [colab](https://github.com/sotc/python-for-devops-june-2022/blob/main/getting_started_python.ipynb)
 
 ### Github Codespaces
 Build out python project scaffold:
@@ -51,12 +49,14 @@ Build out python project scaffold:
 2. edit `~/.bashrc` add `source ~/.venv/bin/activate` #Codecolab container
 3. clone project then run `make all`
 
-## Commandline Tools and Step Functions
-
-![StepFunctionCmdLine](https://user-images.githubusercontent.com/512362/171966733-09a69de4-c1ff-4c2d-8d80-f3e23f9a88ef.png)
-
 ## Microservices
+* Create wikisearch.py and logic.py
 
 ## Containerized Continuous Delivery
-
+* Create Dockerfile
+* Create Container Repository in AWS ECR
+* log into aws ecr using the command line
+* docker build -t devops-june-2022 .
+* docker tag devops-june-2022:latest `<tag name goes here>`
+* docker push `<tag name>`
 `docker run -p 127.0.0.1:8080:8080 <dockerid>`
