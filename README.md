@@ -17,8 +17,8 @@ CDK api gateway & lambda integration. Assumes aws cli installed and account envi
 4. cdk deploy
 
 ## Try out api gateway and lambda fruit service. I'm using Httpie in the example below
-* http POST https://<apigateway>/prod/ fruit=cherry
-* http POST https://<apigateway>/prod/ fruit=durian
+* http POST https://`<apigateway>`/prod/ fruit=cherry
+* http POST https://`<apigateway>`/prod/ fruit=durian
 
 CDK CodeBuild github integration
 1. Create ECR repo cdk methods < Add link to devopscdk_app_stack.py file here >
