@@ -1,9 +1,11 @@
-import aws_cdk as cdk
+#import aws_cdk as cdk
 from constructs import Construct
 from aws_cdk import (
     Stack,
     aws_lambda as _lambda,
     aws_apigateway as apigw,
+    aws_ecr as ecr,
+    aws_codebuild as codebuild,
 )
 
 from constructs import Construct
@@ -27,3 +29,16 @@ class DevopscdkAppStack(Stack):
         stage = apigw.StageOptions(
             stage_name="dev"
         )
+        ecr_repo = ecr.Repository(
+            self, "wikiSearchReop",
+            repository_name="devops-june-2022"
+            )
+        build_docker_image = codebuild.BuildEnvironment(
+            privileged=True
+        )
+        container_build = codebuild.Source.git_hub(
+            owner="sotc",
+            repo="https://github.com/sotc/python-for-devops-june-2022.git",
+
+        )
+        #codebuild.BuildSpec.from_source_filename()

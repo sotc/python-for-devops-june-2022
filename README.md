@@ -6,14 +6,25 @@
 Python DevOps work with AWS and Actions
 
 
-### CI/CD - 
-github Actions
+### CI/ CD - 
+github Actions/ aws CodeBuild
 
 ### IAC
-CDK api gateway & lambda integration. Assumes aws cli installed and account environment variables setup
+CDK api gateway & lambda integration. Assumes aws cli installed and account environment variables setup already
 1. cdk init 
 2. uncomment cdk.Environment in app.py
 3. cdk bootstrap
+4. cdk deploy
+
+## Try out api gateway and lambda fruit service. I'm using Httpie in the example below
+* http POST https://<apigateway>/prod/ fruit=cherry
+* http POST https://<apigateway>/prod/ fruit=durian
+
+CDK CodeBuild github integration
+1. Create ECR repo cdk methods < Add link to devopscdk_app_stack.py file here >
+2. give CodeBuild permissions
+2. Create CodeBuild and buildspec.yaml
+3. `aws ecr get-login-password --region region | docker login --username AWS --password-stdin aws_account_id.dkr.ecr.region.amazonaws.com` Alternate authentication: `brew install docker-credential-helper-ecr`
 
 CDK commands
  * `cdk ls`          list all stacks in the app
@@ -27,9 +38,6 @@ CDK commands
   * Kaizen
   * Culture
   * Automation
-
-## Create a project scaffold
-* Create development environment that is cloud-based:
 
 ### Colab Notebook
 * This is an example of how to use [colab](https://github.com/sotc/python-for-devops-june-2022/blob/main/getting_started_python.ipynb)
@@ -52,7 +60,7 @@ Build out python project scaffold:
 ## Microservices
 * Create wikisearch.py and logic.py
 
-## Containerized Continuous Delivery
+## Containerized Microservice
 * Create Dockerfile
 * Create Container Repository in AWS ECR
 * log into aws ecr using the command line
@@ -60,3 +68,7 @@ Build out python project scaffold:
 * docker tag devops-june-2022:latest `<tag name goes here>`
 * docker push `<tag name>`
 `docker run -p 127.0.0.1:8080:8080 <dockerid>`
+
+## Tear down infrastructure
+* cdk destroy
+* cdk diff
